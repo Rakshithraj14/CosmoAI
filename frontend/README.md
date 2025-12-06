@@ -45,12 +45,5 @@ src/
     └── LoadingIndicator.tsx # Loading animation
 ```
 
-## Quick Start
-
-```bash
-npm install
-npm run dev
-
----
 
 Built with ⊹ ࣪ ﹏𓊝﹏𓂁﹏⊹ ࣪ ˖
