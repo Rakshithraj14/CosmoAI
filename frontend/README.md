@@ -1,40 +1,59 @@
 # CosmoAI
 
-A minimal AI wrapper that teaches you how modern AI applications work.
+A modern AI chat interface built with React.
 
-## What This Project Teaches
+## Features
 
-| Concept | Description |
-|---------|-------------|
-| **What a wrapper is** | A system that connects users to AI models |
-| **Frontend ↔ Backend** | How UI communicates with the server |
-| **Backend ↔ AI** | How the server talks to AI models |
-| **Full data flow** | User input → AI processing → Response display |
-
-## Architecture
-
-```
-User → Frontend (React) → Backend (Hono) → AI Model (GPT4All) → Response
-```
+- 💬 **Chat Interface** — ChatGPT-style conversation UI
+- 🖼️ **Smart Image Generation** — Auto-detects prompts like "draw..." or "generate image..."
+- ⚡ **Real-time Loading** — Animated indicators while waiting for responses
+- 🌙 **Dark Theme** — Modern, clean dark UI
+- 🧩 **Modular Codebase** — Clean separation of components, hooks, and utilities
 
 ## Tech Stack
 
-- **Frontend:** React + TypeScript + Vite + Tailwind CSS
-- **Backend:** Bun + Hono
+| Layer | Technology |
+|-------|------------|
+| **Framework** | React + TypeScript |
+| **Build Tool** | Vite |
+| **Styling** | Tailwind CSS v4 |
+| **HTTP Client** | Axios |
 
+## Project Structure
+
+```
+src/
+├── App.tsx                 # Main app component
+├── main.tsx                # Entry point
+├── index.css               # Global styles + Tailwind
+│
+├── types/
+│   └── index.ts            # TypeScript interfaces
+│
+├── utils/
+│   └── api.ts              # API utilities
+│
+├── hooks/
+│   └── useChat.ts          # Chat logic hook
+│
+└── components/
+    ├── index.ts            # Barrel exports
+    ├── Header.tsx          # CosmoAI logo header
+    ├── WelcomeScreen.tsx   # Welcome message
+    ├── ChatMessage.tsx     # Message bubble
+    ├── ChatInput.tsx       # Input form
+    └── LoadingIndicator.tsx # Loading animation
+```
 
 ## Quick Start
 
 ```bash
-# Frontend
-cd frontend && npm install && npm run dev
-
+npm install
+npm run dev
 ```
 
-## Why Build This?
-
-This simple pattern is the foundation of ChatGPT, Claude, and every AI app. Master it, and you can build anything.
+Opens at [http://localhost:5173](http://localhost:5173)
 
 ---
 
-Built with ☕
+Built with ⊹ ࣪ ﹏𓊝﹏𓂁﹏⊹ ࣪ ˖
