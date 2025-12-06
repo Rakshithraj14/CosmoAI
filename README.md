@@ -1,21 +1,21 @@
 # CosmoAI
 
-A full-stack AI wrapper application that demonstrates how modern AI apps work — from frontend to backend to AI model integration.
+A full-stack AI wrapper application that demonstrates how modern AI apps work from frontend to backend to AI model integration.
 
 ## What This Project Teaches
 
-- **What a wrapper is** — A system that connects users to AI models
-- **Frontend ↔ Backend** — How the UI communicates with the server
-- **Backend ↔ AI** — How the server talks to AI providers
-- **Full data flow** — User input → API processing → Response display
+- **What a wrapper is** : A system that connects users to AI models
+- **Frontend ↔ Backend** : How the UI communicates with the server
+- **Backend ↔ AI** : How the server talks to AI providers
+- **Full data flow** : User input → API processing → Response display
 
 ## Features
 
-- 💬 **Chat Interface** — ChatGPT-style conversation UI
-- 🖼️ **Image Generation** — Auto-detects prompts like "draw a cat"
-- ⚡ **Real-time Loading** — Animated indicators while waiting
-- 🌙 **Dark Theme** — Modern, clean UI
-- 🧩 **Modular Code** — Clean separation of concerns
+- 💬 **Chat Interface** : ChatGPT-style conversation UI
+- 🖼️ **Image Generation** : Auto-detects prompts like "draw a cat"
+- ⚡ **Real-time Loading** : Animated indicators while waiting
+- 🌙 **Dark Theme** : Modern, clean UI
+- 🧩 **Modular Code** : Clean separation of concerns
 
 ## Architecture
 
