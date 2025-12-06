@@ -6,15 +6,19 @@ const app = new Hono();
 app.use("/*", cors());
 
 // Environment variables
-const GROQ_API_KEY = process.env.GROQ_API_KEY || "";
-const GROQ_API_URL = process.env.GROQ_API_URL || "https://api.groq.com/openai/v1/chat/completions";
-const GROQ_MODEL = process.env.GROQ_MODEL || "llama-3.1-8b-instant";
+const GROQ_API_KEY = process.env.GROQ_API_KEY;
+const GROQ_API_URL = process.env.GROQ_API_URL;
+const GROQ_MODEL = process.env.GROQ_MODEL;
 
-const HF_TOKEN = process.env.HF_TOKEN || "";
-const HF_API_URL = process.env.HF_API_URL || "https://router.huggingface.co/hf-inference/models/stabilityai/stable-diffusion-xl-base-1.0";
+const HF_TOKEN = process.env.HF_TOKEN;
+const HF_API_URL = process.env.HF_API_URL;
 
 // Text Generation (Groq)
 app.post("/api/chat", async (c) => {
+  if (!GROQ_API_URL || !GROQ_API_KEY) {
+    return c.json({ reply: "API not configured." });
+  }
+
   try {
     const { prompt } = await c.req.json();
 
@@ -45,6 +49,10 @@ app.post("/api/chat", async (c) => {
 
 // Image Generation (HuggingFace)
 app.post("/api/image", async (c) => {
+  if (!HF_API_URL || !HF_TOKEN) {
+    return c.json({ error: "API not configured." });
+  }
+
   try {
     const { prompt } = await c.req.json();
 
