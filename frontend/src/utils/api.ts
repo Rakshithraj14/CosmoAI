@@ -19,7 +19,9 @@ const imageKeywords = [
   "generate image",
   "create image",
   "make image",
-  "draw",
+  "draw a",
+  "draw an",
+  "draw me",
   "generate picture",
   "create picture",
   "generate art",
@@ -28,6 +30,8 @@ const imageKeywords = [
   "create a image",
   "generate an image",
   "create an image",
+  "make a picture",
+  "make an image",
 ];
 
 export const isImageRequest = (text: string): boolean => {
